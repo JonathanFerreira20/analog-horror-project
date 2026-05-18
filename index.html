@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon"
+  href="assets/images/icon.png"
+  type="image/png">
+  <title>Creep Archives</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+     BOOT SCREEN
+========================= -->
+
+<div id="bootScreen">
+
+  <div id="bootEntity"></div>
+
+  <div id="bootText">
+    
+    <div id="bootNoise"></div>
+
+    <p>ACCESSING ARCHIVES...</p>
+
+    <p>SEARCHING SIGNAL...</p>
+
+    <p>RECOVERING FILES...</p>
+
+    <p class="warningBoot">
+      ENTITY DETECTED
+    </p>
+
+  </div>
+
+</div>
+
+  <button id="audioButton">
+  🔊 ENABLE TRANSMISSION
+</button>
+
+  <!-- =========================
+       EFEITOS VISUAIS GLOBAIS
+  ========================== -->
+
+  <!-- transição cinematográfica -->
+  <div id="cinematicFlash"></div>
+
+  <!-- efeito VHS -->
+  <div id="vhsEffect"></div>
+
+  <!-- névoa -->
+  <div class="fog"></div>
+
+  <!-- ruído analógico -->
+  <div class="noise"></div>
+
+  <!-- entidade -->
+  <div id="entity"></div>
+
+  <!-- overlay glitch -->
+  <div id="glitchOverlay"></div>
+
+  <div id="entityEyes"></div>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <h1 class="logo">
+      CREEP ARCHIVES
+    </h1>
+
+    <p class="subtitle">
+      Arquivos recuperados de origens desconhecidas
+    </p>
+
+  </header>
+
+  <!-- =========================
+       CONTEÚDO
+  ========================== -->
+
+  <main class="container">
+
+    <!-- ENTIDADES -->
+    <section>
+
+      <h2 class="section-title">
+        ENTIDADES
+      </h2>
+
+      <div class="grid">
+
+        <!-- SLENDER -->
+        <div
+         class="card slender"
+         onclick="openPage('pages/slenderman/index.html')"
+        >
+
+          <h3>Slender Man</h3>
+
+          <p>
+            Ele observa da floresta...
+          </p>
+
+        </div>
+
+        <!-- JASON -->
+        <div class="card jason"
+        onclick="openPage('pages/jason/index.html')">
+
+          <h3>Jason</h3>
+
+          <p>
+            Ele nunca deixa você escapar...
+          </p>
+
+        </div>
+
+        <!-- SPRINGTRAP -->
+        <div class="card springtrap"
+            onclick="openPage('pages/springtrap/index.html')">
+
+          <h3>Springtrap</h3>
+
+          <p>
+            Algo ainda está vivo lá dentro...
+          </p>
+
+        </div>
+
+        <!-- HEROBRINE -->
+        <div class="card herobrine"
+             onclick="openPage('pages/herobrine/index.html')">
+
+          <h3>Herobrine</h3>
+
+          <p>
+            O mundo não está sozinho...
+          </p>
+
+        </div>
+
+        <!-- PENNYWISE -->
+        <div class="card pennywise"
+             onclick="openPage('pages/pennywise/index.html')">
+
+          <h3>Pennywise</h3>
+
+          <p>
+            Todos flutuam aqui embaixo...
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FENÔMENOS -->
+    <section>
+
+      <h2 class="section-title">
+        FENÔMENOS
+      </h2>
+
+      <div class="grid">
+
+        <!-- BACKROOMS -->
+        <div class="card backrooms"
+             onclick="openPage('pages/backrooms/index.html')">
+
+          <h3>Backrooms</h3>
+
+          <p>
+            Você entrou sem perceber...
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================
+       ÁUDIOS
+  ========================== -->
+
+  <!-- ambiente principal -->
+  <audio id="ambience" loop>
+    <source src="assets/sounds/dark_ambience.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- sussurro -->
+  <audio id="whisper1">
+    <source src="assets/sounds/whisper1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- scream raro -->
+  <audio id="scream1">
+    <source src="assets/sounds/scream1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ruído VHS -->
+  <audio id="vhsNoise">
+    <source src="assets/sounds/vhs_noise.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>

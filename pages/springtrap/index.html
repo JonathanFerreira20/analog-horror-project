@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Springtrap</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+</head>
+<body>
+
+  <!-- VHS -->
+  <div id="vhs"></div>
+
+  <!-- overlay -->
+  <div id="overlay"></div>
+
+  <!-- mensagens glitch -->
+  <div id="messageContainer"></div>
+
+  <!-- =========================
+       CENA 1
+  ========================= -->
+
+  <section
+    id="scene1"
+    class="scene active">
+
+    <div class="camera-label">
+
+      CAMERA 03 — MAIN STAGE
+
+    </div>
+
+    <div class="sceneText">
+
+      ARQUIVO RECUPERADO — 1987
+
+    </div>
+
+    <button onclick="nextScene()">
+
+      ACESSAR ARQUIVO
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA 2
+  ========================= -->
+
+  <section
+    id="scene2"
+    class="scene">
+
+    <!-- springtrap sentado -->
+    <div id="springtrapSeat"></div>
+
+    <!-- fala -->
+    <div class="quote">
+
+      "Eles tentaram me esconder."
+
+    </div>
+
+    <!-- história -->
+    <div class="storyText">
+
+      Depois do incêndio,
+      muitos acreditaram que tudo havia acabado.
+
+      Mas algumas fitas continuaram aparecendo.
+
+      Funcionários relataram sons vindo
+      das salas fechadas da antiga Fazbear.
+
+      Câmeras desligavam sozinhas.
+
+      Movimentos eram detectados após meia-noite.
+
+      Alguns diziam ver um homem preso
+      dentro de um traje apodrecido.
+
+      Outros diziam que aquilo
+      não era mais humano.
+
+      O sistema tentou apagar tudo.
+
+      Mas algo permaneceu.
+
+    </div>
+
+    <button onclick="finalScene()">
+
+      IR PARA O PRÓXIMO ARQUIVO
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA FINAL
+  ========================= -->
+
+  <section
+    id="scene3"
+    class="scene">
+
+    <!-- springtrap full -->
+    <div id="springtrapFull"></div>
+
+    <!-- frase final -->
+    <div id="finalText">
+
+      I ALWAYS COME BACK
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

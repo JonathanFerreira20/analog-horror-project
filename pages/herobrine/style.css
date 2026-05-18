@@ -1,0 +1,528 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+html,
+body {
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: black;
+
+  font-family: monospace;
+
+  color: white;
+}
+
+/* =========================
+   CENAS
+========================= */
+
+.scene {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 1s ease;
+
+  overflow-y: auto;
+}
+
+.scene.active {
+
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+/* =========================
+   CENA 1
+========================= */
+
+#scene1 {
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.3),
+      rgba(0,0,0,0.7)
+    ),
+    url("assets/images/minecraft-normal.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+/* texto minecraft */
+
+.worldInfo {
+
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  color: #55ff55;
+
+  font-size: 16px;
+
+  letter-spacing: 3px;
+
+  text-shadow:
+    0 0 10px #55ff55;
+}
+
+/* =========================
+   CENA 2
+========================= */
+
+#scene2 {
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.85)
+    ),
+    url("assets/images/minecraft-corrupted.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+
+  padding: 120px 20px;
+}
+
+/* herobrine distante */
+
+#herobrineFar {
+
+  position: fixed;
+
+  right: 10%;
+
+  bottom: 0;
+
+  width: 280px;
+  height: 500px;
+
+  background:
+    url("assets/images/herobrine-far.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  filter:
+    brightness(1.1)
+    drop-shadow(0 0 15px white);
+
+  animation:
+    subtleMove 5s infinite ease-in-out;
+}
+
+/* =========================
+   CENA 3
+========================= */
+
+#scene3 {
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.95)
+    ),
+    url("assets/images/minecraft-corrupted.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+
+  padding: 120px 20px;
+}
+
+/* herobrine médio */
+
+#herobrineMid {
+
+  position: fixed;
+
+  right: 5%;
+
+  bottom: -20px;
+
+  width: 420px;
+  height: 650px;
+
+  background:
+    url("assets/images/herobrine-mid.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0.7;
+
+  pointer-events: none;
+
+  filter:
+    brightness(1.2)
+    drop-shadow(0 0 20px white);
+
+  animation:
+    glitchFloat 4s infinite ease-in-out;
+}
+
+/* =========================
+   TEXTO HISTÓRIA
+========================= */
+
+.storyText {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  line-height: 2.2;
+
+  font-size: 19px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,0.88);
+
+  padding-bottom: 200px;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+
+  margin-top: 60px;
+
+  padding: 16px 30px;
+
+  background:
+    rgba(0,0,0,0.7);
+
+  border:
+    1px solid rgba(255,255,255,0.15);
+
+  color: white;
+
+  font-family: monospace;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  backdrop-filter: blur(4px);
+}
+
+button:hover {
+
+  transform: scale(1.04);
+
+  border-color: #55ff55;
+
+  box-shadow:
+    0 0 20px rgba(85,255,85,0.25);
+}
+
+/* =========================
+   CENA FINAL
+========================= */
+
+#scene4 {
+
+  background: black;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* herobrine caverna */
+
+#herobrineCave {
+
+  position: absolute;
+
+  width: 900px;
+  height: 100%;
+
+  background:
+    url("assets/images/herobrine-cave.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  transform: scale(0.8);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* frase final */
+
+#finalText {
+
+  position: absolute;
+
+  bottom: 10%;
+
+  font-size: 36px;
+
+  letter-spacing: 8px;
+
+  text-align: center;
+
+  color: white;
+
+  opacity: 0;
+
+  text-shadow:
+    0 0 20px white;
+}
+
+/* =========================
+   VHS
+========================= */
+
+#vhs {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  opacity: 0.08;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+
+  animation:
+    vhsMove 0.15s infinite;
+}
+
+/* overlay */
+
+#overlay {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: black;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  transition: 0.3s ease;
+}
+
+/* =========================
+   GLITCH MESSAGES
+========================= */
+
+.glitchMessage {
+
+  position: fixed;
+
+  color: white;
+
+  font-size: 18px;
+
+  letter-spacing: 4px;
+
+  z-index: 99999;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 0 10px white;
+
+  animation:
+    textGlitch 0.08s infinite;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes subtleMove {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glitchFloat {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes vhsMove {
+
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes textGlitch {
+
+  0% {
+    transform: translate(0px);
+  }
+
+  25% {
+    transform: translate(-2px, 1px);
+  }
+
+  50% {
+    transform: translate(2px, -1px);
+  }
+
+  75% {
+    transform: translate(-1px, 2px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .storyText {
+
+    font-size: 15px;
+
+    line-height: 2;
+  }
+
+  #herobrineFar {
+
+    width: 180px;
+    height: 320px;
+  }
+
+  #herobrineMid {
+
+    width: 260px;
+    height: 420px;
+  }
+
+  #herobrineCave {
+
+    width: 140%;
+  }
+
+  #finalText {
+
+    font-size: 22px;
+
+    padding: 20px;
+  }
+
+  button {
+
+    width: 85%;
+  }
+}
+

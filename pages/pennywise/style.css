@@ -1,0 +1,560 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+html,
+body {
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: black;
+
+  font-family: monospace;
+
+  color: white;
+}
+
+/* =========================
+   CENAS
+========================= */
+
+.scene {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 1s ease;
+
+  overflow-y: auto;
+}
+
+.scene.active {
+
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+/* =========================
+   CENA 1
+========================= */
+
+#scene1 {
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.8)
+    ),
+    url("assets/images/rain-street.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+/* =========================
+   CENA 2
+========================= */
+
+#scene2 {
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.9)
+    ),
+    url("assets/images/sewer.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+
+  padding: 120px 20px;
+}
+
+/* =========================
+   CENA 3
+========================= */
+
+#scene3 {
+
+  background:
+    linear-gradient(
+      rgba(20,0,0,0.7),
+      rgba(0,0,0,0.95)
+    ),
+    url("assets/images/sewer.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+
+  padding: 120px 20px;
+}
+
+/* =========================
+   PENNYWISE MÉDIO
+========================= */
+
+#pennywiseMid {
+
+  position: fixed;
+
+  right: 3%;
+
+  bottom: -20px;
+
+  width: 420px;
+  height: 700px;
+
+  background:
+    url("assets/images/pennywise-mid.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0.75;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 0 25px red)
+    brightness(1.05);
+
+  animation:
+    clownFloat 4s infinite ease-in-out;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.storyText {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  line-height: 2.2;
+
+  font-size: 19px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,0.9);
+
+  padding-bottom: 180px;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.6);
+}
+
+/* título */
+
+.sceneTitle {
+
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  color: #ff3b3b;
+
+  letter-spacing: 4px;
+
+  font-size: 16px;
+
+  text-shadow:
+    0 0 15px red;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+
+  margin-top: 60px;
+
+  padding: 16px 32px;
+
+  background:
+    rgba(0,0,0,0.7);
+
+  border:
+    1px solid rgba(255,0,0,0.3);
+
+  color: white;
+
+  font-family: monospace;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  backdrop-filter: blur(4px);
+}
+
+button:hover {
+
+  transform: scale(1.05);
+
+  border-color: red;
+
+  box-shadow:
+    0 0 25px rgba(255,0,0,0.35);
+}
+
+/* =========================
+   CENA FINAL
+========================= */
+
+#scene4 {
+
+  background: black;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   BALÃO GIGANTE
+========================= */
+
+#giantBalloon {
+
+  position: absolute;
+
+  width: 260px;
+  height: 420px;
+
+  background:
+    url("assets/images/balloon.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  transform: scale(0.2);
+
+  z-index: 5;
+}
+
+/* =========================
+   PENNYWISE FINAL
+========================= */
+
+#pennywiseFinal {
+
+  position: absolute;
+
+  width: 1000px;
+  height: 100%;
+
+  background:
+    url("assets/images/pennywise-full.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  transform: scale(0.7);
+
+  z-index: 20;
+
+  filter:
+    drop-shadow(0 0 30px red);
+}
+
+/* =========================
+   TEXTO FINAL
+========================= */
+
+#finalText {
+
+  position: absolute;
+
+  bottom: 10%;
+
+  text-align: center;
+
+  font-size: 38px;
+
+  letter-spacing: 8px;
+
+  color: white;
+
+  opacity: 0;
+
+  z-index: 30;
+
+  text-shadow:
+    0 0 20px red,
+    0 0 40px red;
+}
+
+/* =========================
+   BALÕES PEQUENOS
+========================= */
+
+.balloon {
+
+  position: fixed;
+
+  width: 90px;
+  height: 140px;
+
+  background:
+    url("assets/images/balloon.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+  opacity: 0.8;
+
+  animation:
+    balloonFloat linear forwards;
+}
+
+/* =========================
+   VHS
+========================= */
+
+#vhs {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  opacity: 0.08;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+
+  animation:
+    vhsMove 0.15s infinite;
+}
+
+/* =========================
+   OVERLAY VERMELHO
+========================= */
+
+#overlay {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    rgba(255,0,0,0.15);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  transition: 0.2s ease;
+}
+
+/* =========================
+   GLITCH MESSAGES
+========================= */
+
+.glitchMessage {
+
+  position: fixed;
+
+  color: red;
+
+  font-size: 18px;
+
+  letter-spacing: 4px;
+
+  z-index: 99999;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 0 12px red;
+
+  animation:
+    textGlitch 0.08s infinite;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes clownFloat {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes balloonFloat {
+
+  from {
+
+    transform:
+      translateY(100vh);
+
+    opacity: 0;
+  }
+
+  to {
+
+    transform:
+      translateY(-150vh);
+
+    opacity: 1;
+  }
+}
+
+@keyframes vhsMove {
+
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes textGlitch {
+
+  0% {
+    transform: translate(0px);
+  }
+
+  25% {
+    transform: translate(-2px, 1px);
+  }
+
+  50% {
+    transform: translate(2px, -1px);
+  }
+
+  75% {
+    transform: translate(-1px, 2px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .storyText {
+
+    font-size: 15px;
+
+    line-height: 2;
+  }
+
+  #pennywiseMid {
+
+    width: 260px;
+    height: 430px;
+  }
+
+  #pennywiseFinal {
+
+    width: 150%;
+  }
+
+  #finalText {
+
+    font-size: 24px;
+
+    padding: 20px;
+  }
+
+  button {
+
+    width: 85%;
+  }
+}
+

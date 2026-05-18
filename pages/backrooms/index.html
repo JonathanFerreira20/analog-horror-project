@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <!-- caracteres -->
+  <meta charset="UTF-8">
+
+  <!-- responsividade -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <!-- título -->
+  <title>Backrooms</title>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+</head>
+<body>
+
+
+  <!-- =========================
+       VHS
+  ========================= -->
+
+  <div id="crt"></div>
+
+  <!-- overlay -->
+  <div id="overlay"></div>
+
+  <!-- glitch -->
+  <div id="glitchMessages"></div>
+
+  <!-- =========================
+       CENA 1
+  ========================= -->
+
+  <section
+    id="scene1"
+    class="scene active">
+
+    <!-- localização -->
+    <div class="location">
+
+      ESCRITÓRIO — 23:47
+
+    </div>
+
+    <!-- texto -->
+    <div class="storyText">
+
+      Tudo parecia normal.
+
+      Apenas mais uma noite
+      trabalhando sozinho.
+
+      O zumbido das luzes.
+
+      O som dos computadores.
+
+      O silêncio do prédio vazio.
+
+      Então algo começou a parecer errado.
+
+    </div>
+
+    <!-- botão -->
+    <button onclick="nextScene1()">
+
+      CONTINUAR
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA 2
+  ========================= -->
+
+  <section
+    id="scene2"
+    class="scene">
+
+    <!-- texto -->
+    <div class="storyText">
+
+      As paredes pareciam diferentes.
+
+      O corredor não terminava.
+
+      As luzes começaram a piscar.
+
+      O ar parecia pesado.
+
+      E então você percebeu.
+
+      Não estava mais no escritório.
+
+    </div>
+
+    <!-- botão -->
+    <button onclick="nextScene2()">
+
+      EXPLORAR
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA 3
+  ========================= -->
+
+  <section
+    id="scene3"
+    class="scene">
+
+    <!-- entidade distante -->
+    <div id="shadowEntity"></div>
+
+    <!-- texto -->
+    <div class="storyText">
+
+      Não existe saída.
+
+      Apenas corredores.
+
+      Salas iguais.
+
+      O mesmo carpete molhado.
+
+      O mesmo som das lâmpadas.
+
+      E às vezes...
+
+      passos.
+
+    </div>
+
+    <!-- botão -->
+    <button onclick="finalScene()">
+
+      CONTINUAR ANDANDO
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA FINAL
+  ========================= -->
+
+  <section
+    id="scene4"
+    class="scene">
+
+    <!-- backrooms escura -->
+    <div id="darkness"></div>
+
+    <!-- homens amarelos -->
+    <div id="observers"></div>
+
+    <!-- frase -->
+    <div id="finalText">
+
+      Mais um entrou.
+
+      E as Backrooms já começaram
+      a observá-lo.
+
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

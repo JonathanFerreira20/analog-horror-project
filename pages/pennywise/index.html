@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <!-- caracteres -->
+  <meta charset="UTF-8">
+
+  <!-- responsividade -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <!-- nome da aba -->
+  <title>Pennywise</title>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+</head>
+<body>
+
+  <!-- =========================
+       VHS / OVERLAY
+  ========================= -->
+
+  <!-- linhas VHS -->
+  <div id="crt"></div>
+
+  <!-- overlay vermelho -->
+  <div id="overlay"></div>
+
+  <!-- mensagens glitch -->
+  <div id="messageContainer"></div>
+
+  <!-- balões -->
+  <div id="balloonContainer"></div>
+
+  <!-- =========================
+       CENA 1
+  ========================= -->
+
+  <section
+    id="scene1"
+    class="scene active">
+
+    <!-- texto topo -->
+    <div class="sceneTitle">
+
+      DERRY — 1989
+
+    </div>
+
+    <!-- história -->
+    <div class="storyText">
+
+      A chuva não parava.
+
+      As ruas estavam vazias.
+
+      Mas algo estranho apareceu
+      naquela noite.
+
+      Um único balão vermelho.
+
+      Flutuando sozinho
+      no meio da rua.
+
+    </div>
+
+    <!-- botão -->
+    <button onclick="nextScene1()">
+
+      SEGUIR O BALÃO
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA 2
+  ========================= -->
+
+  <section
+    id="scene2"
+    class="scene">
+
+    <!-- texto -->
+    <div class="storyText">
+
+      O balão parecia levar
+      até os esgotos da cidade.
+
+      Algumas crianças
+      desapareceram ali.
+
+      Algumas pessoas diziam
+      ouvir risadas vindas da escuridão.
+
+      Outras afirmavam
+      ver olhos brilhando
+      dentro dos túneis.
+
+    </div>
+
+    <!-- botão -->
+    <button onclick="nextScene2()">
+
+      ENTRAR NO ESGOTO
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA 3
+  ========================= -->
+
+  <section
+    id="scene3"
+    class="scene">
+
+    <!-- Pennywise -->
+    <div id="pennywiseMid"></div>
+
+    <!-- história -->
+    <div class="storyText">
+
+      Ele estava lá.
+
+      Observando.
+
+      Esperando.
+
+      O sorriso parecia impossível.
+
+      As luzes começaram a falhar.
+
+      E então os balões surgiram.
+
+    </div>
+
+    <!-- botão -->
+    <button onclick="finalScene()">
+
+      ABRIR ÚLTIMO ARQUIVO
+
+    </button>
+
+  </section>
+
+  <!-- =========================
+       CENA FINAL
+  ========================= -->
+
+  <section
+    id="scene4"
+    class="scene">
+
+    <!-- balão gigante -->
+    <div id="giantBalloon"></div>
+
+    <!-- Pennywise final -->
+    <div id="pennywiseFinal"></div>
+
+    <!-- frase -->
+    <div id="finalText">
+
+      VOCÊ TAMBÉM VAI FLUTUAR
+
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
