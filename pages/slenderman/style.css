@@ -48,7 +48,6 @@ body {
   margin: auto;
 
   padding:
-
     120px 30px
     180px 30px;
 
@@ -109,7 +108,6 @@ body {
   margin: auto;
 
   padding:
-
     18px 30px;
 
   background:
@@ -237,7 +235,7 @@ body {
     scale(0.45);
 
   background:
-  url("assets/images/slenderman-full.png");
+    url("assets/images/slenderman-full.png");
 
   background-size: contain;
 
@@ -325,7 +323,7 @@ body {
   height: 100%;
 
   background:
-  url("assets/images/slenderman-face.png");
+    url("assets/images/slenderman-face.png");
 
   background-size: contain;
 
@@ -437,4 +435,3 @@ body {
     padding: 0 20px;
   }
 }
-
